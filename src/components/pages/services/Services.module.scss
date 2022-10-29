@@ -1,0 +1,16 @@
+.services {
+  background: #fbfbfb;
+  padding: 100px 0;
+  .title {
+    width: fit-content;
+    margin: auto;
+    margin-bottom: 50px;
+  }
+  li {
+    margin-right: 40px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -34,5 +34,22 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.10.11",
+    "get-google-fonts": "^1.2.2",
+    "node-sass": "^7.0.3",
+    "radium": "^0.26.2",
+    "react-alice-carousel": "^2.6.4",
+    "react-animations": "^1.0.0",
+    "react-icons": "^4.6.0",
+    "react-native-web": "^0.18.9",
+    "react-router-dom": "^6.4.2",
+    "react-skillbars": "^2.1.0",
+    "react-spring": "^9.5.5",
+    "react-ui": "^1.0.0-beta.32",
+    "styled-components": "^5.3.6"
   }
 }

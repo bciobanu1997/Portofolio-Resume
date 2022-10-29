@@ -1,0 +1,30 @@
+.title {
+  margin: 100px 0 50px 0;
+}
+
+.container {
+  display: flex;
+
+  .education {
+    flex: 2;
+  }
+  .skills {
+    flex: 2;
+    .description {
+      line-height: 26px;
+      font-size: 14px;
+    }
+  }
+  .bar {
+    list-style-type: none;
+    padding: 0;
+    .skill {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    li {
+      list-style-type: none;
+      margin-top: 5px;
+    }
+  }
+}

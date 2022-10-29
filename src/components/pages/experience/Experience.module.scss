@@ -1,0 +1,28 @@
+.experience {
+  background-color: #fbfbfb;
+  padding: 100px 0;
+  .container {
+    display: flex;
+    .subjectColumn {
+      flex: 1;
+      .title {
+      }
+      .subjects {
+        display: inline-block;
+        margin-top: 40px;
+        .btn {
+          display: flex;
+          background: #fff;
+          border: none;
+          padding: 10px 15px;
+          margin-top: 10px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .descriptionColumn {
+      flex: 2;
+    }
+  }
+}

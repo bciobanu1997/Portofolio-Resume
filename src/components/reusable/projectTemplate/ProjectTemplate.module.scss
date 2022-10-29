@@ -1,0 +1,27 @@
+.project_template {
+  width: fit-content;
+
+  .container {
+    .title {
+      margin-top: 20px;
+    }
+    .framework {
+      margin-top: 10px;
+      font-size: 11px;
+      color: #656d72;
+      display: flex;
+      align-items: center;
+      width: fit-content;
+      height: fit-content;
+      justify-content: center;
+      .__title {
+        border: 0.3px solid #f1f1f1;
+        width: fit-content;
+        padding: 5px;
+        border-radius: 5px;
+        display: flex;
+        margin-right: 10px;
+      }
+    }
+  }
+}
