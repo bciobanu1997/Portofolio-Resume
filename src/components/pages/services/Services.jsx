@@ -41,7 +41,7 @@ const responsive = {
 };
 export default function Services() {
   return (
-    <div className={classes.services}>
+    <div className={classes.services} id="services">
       <div className={adaptive._container}>
         <div className={classes.title}>
           <ChapterName title={"services"} subtitle={"Specialized in"} />

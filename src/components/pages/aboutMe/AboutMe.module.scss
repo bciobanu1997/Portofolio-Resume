@@ -15,7 +15,6 @@
   }
   .profilePhoto {
     justify-content: end;
-
     display: flex;
   }
 }
@@ -36,7 +35,7 @@
     }
     .profilePhoto {
       justify-content: end;
-      flex: 1;
+      flex: 2w;
       display: flex;
     }
   }

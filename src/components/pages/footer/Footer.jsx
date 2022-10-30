@@ -18,7 +18,7 @@ export default function Footer() {
     );
   }
   return (
-    <div className={classes.footer}>
+    <div className={classes.footer} id="contact">
       <div className={adaptive._container}>
         <div className={classes.form}>
           <div className={classes.emailForm}>

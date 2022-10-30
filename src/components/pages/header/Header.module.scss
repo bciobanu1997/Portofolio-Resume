@@ -2,9 +2,12 @@
 
 .header {
   z-index: 1;
-  position: relative;
+  position: sticky;
   transition: 0.3s ease all;
-
+  top: 0;
+  z-index: 2;
+  background: #fff;
+  opacity: 0.95;
   .content {
     overflow: hidden;
     color: inherit;

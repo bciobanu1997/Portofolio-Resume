@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import classes from "./Experience.module.scss";
 import { useState } from "react";
 import adaptive from "../../constants/screenSize.module.scss";
@@ -12,18 +12,12 @@ const FadeInDiv = styled.div`
 `;
 export default function Experience() {
   const [showInfo, setShowInfo] = useState("ShowCard1");
-  const [smoothAction, setSmoothAction] = useState(false);
-  const triggerSmooth = () => {
-    setSmoothAction((prevState) => {
-      return !prevState;
-    });
-  };
+
   function customButton(btnName, actionValue) {
     return (
       <button
         onClick={() => {
           setShowInfo(actionValue);
-          triggerSmooth();
         }}
         style={{ color: actionValue === showInfo ? "#7E74F1" : "#181818" }}
         className={classes.btn}
@@ -33,7 +27,7 @@ export default function Experience() {
     );
   }
   return (
-    <div className={classes.experience}>
+    <div className={classes.experience} id="experience">
       <div className={adaptive._container}>
         <div className={classes.container}>
           <div className={classes.subjectColumn}>

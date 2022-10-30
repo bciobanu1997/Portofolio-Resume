@@ -8,18 +8,32 @@ import ProjectTemplate from "../../reusable/projectTemplate/ProjectTemplate";
 import Project1 from "../../../assets/img/project1.png";
 import Project2 from "../../../assets/img/project2.png";
 import Project3 from "../../../assets/img/project3.png";
+import Project4 from "../../../assets/img/project4.png";
 const items = [
   <ProjectTemplate
-    image={Project2}
+    image={Project1}
     title={"Finance Website"}
     link={"https://bciobanu1997.github.io/DemoLandingV1/"}
+    language={"HTML CSS"}
   />,
   <ProjectTemplate
     image={Project3}
     title={"E-Commerce Website"}
     link={" https://meliorastore.co.uk"}
+    language={"React"}
   />,
-  <ProjectTemplate image={Project1} title={"Portofolio Website"} link={""} />,
+  <ProjectTemplate
+    image={Project4}
+    title={"Medical Quotes Website"}
+    link={"https://bciobanu1997.github.io/DemoLandingV2/"}
+    language={"HTML CSS"}
+  />,
+  <ProjectTemplate
+    image={Project2}
+    title={"Portofolio Website"}
+    language={"React"}
+    link={""}
+  />,
 ];
 const responsive = {
   0: { items: 2 },
@@ -28,10 +42,9 @@ const responsive = {
 };
 export default function Portofolios() {
   return (
-    <div className={adaptive._container}>
+    <div className={adaptive._container} id="portofolios">
       <div className={classes.portofolios}>
         <div className={classes.title}>
-          {" "}
           <ChapterName title={"My works"} subtitle={"Featured Portfolios"} />
         </div>
         <AliceCarousel

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import classes from "./App.module.scss";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import useScrollToTop from "../../hooks/useScrollToTop";

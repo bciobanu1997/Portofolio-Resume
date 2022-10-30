@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import classes from "./Header.module.scss";
 import adaptive from "../../constants/screenSize.module.scss";
 import useWindowDimensions from "../../hooks/useWindowDimension";
@@ -8,6 +8,7 @@ import { HiMenuAlt1 } from "react-icons/hi";
 import { SiProgress } from "react-icons/si";
 import { CgClose } from "react-icons/cg";
 import Logo from "../../../assets/logos/logo.png";
+import { Link } from "react-scroll";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -32,13 +33,15 @@ const Header = () => {
     });
   };
   return (
-    <header className={`${classes.header} ${adaptive._container}`}>
-      <div className={classes.content}>
+    <header className={`${classes.header}`}>
+      <div className={`${classes.content} ${adaptive._container}`}>
         <div className={classes.logo}>
           <div className={classes.img}>
             <img src={Logo} alt="logo" />
           </div>
-          <div className={classes.name}>Boris</div>
+          <Link to="home" spy={true} smooth={true} offset={-100} duration={500}>
+            <div className={classes.name}>Boris</div>
+          </Link>
         </div>
         <div className={classes.navs}>
           <nav
@@ -48,30 +51,62 @@ const Header = () => {
           >
             <ul>
               <li>
-                {width < md3 ? (
-                  <MdDesignServices className={classes.logo} />
-                ) : (
-                  ""
-                )}
-                Services
+                <Link
+                  to="services"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  {width < md3 ? (
+                    <MdDesignServices className={classes.logo} />
+                  ) : (
+                    ""
+                  )}
+                  Services
+                </Link>
               </li>
 
               <li>
-                {width < md3 ? <GrProjects className={classes.logo} /> : ""}
-                Portofolios
+                <Link
+                  to="portofolios"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  {width < md3 ? <GrProjects className={classes.logo} /> : ""}
+                  Portofolios
+                </Link>
               </li>
 
               <li>
-                {width < md3 ? <SiProgress className={classes.logo} /> : ""}
-                Experience
+                <Link
+                  to="experience"
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  duration={500}
+                >
+                  {width < md3 ? <SiProgress className={classes.logo} /> : ""}
+                  Experience
+                </Link>
               </li>
               <li>
-                {width < md3 ? (
-                  <MdOutlineContactPhone className={classes.logo} />
-                ) : (
-                  ""
-                )}
-                Contact
+                <Link
+                  to="contact"
+                  spy={true}
+                  smooth={true}
+                  offset={-20}
+                  duration={500}
+                >
+                  {width < md3 ? (
+                    <MdOutlineContactPhone className={classes.logo} />
+                  ) : (
+                    ""
+                  )}
+                  Contact
+                </Link>
               </li>
             </ul>
           </nav>

@@ -56,6 +56,7 @@ export default function EmailForm() {
           <p>Send Message</p>
         </button>
       </form>
+      <ToastContainer />
     </div>
   );
 }

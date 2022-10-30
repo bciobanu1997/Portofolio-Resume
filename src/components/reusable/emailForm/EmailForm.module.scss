@@ -1,7 +1,6 @@
 @import "../../constants/screenSize.module.scss";
 
 .emailForm {
-  display: flex;
   text-align: start;
 
   input {
@@ -50,6 +49,7 @@
     border: none;
     background-color: #7e74f1;
     border-radius: 5px;
+    padding: 8px 0px;
     @media (max-width: $md1+px) {
       width: 50vw;
     }

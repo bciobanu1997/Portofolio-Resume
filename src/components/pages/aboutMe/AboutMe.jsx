@@ -2,7 +2,6 @@ import React from "react";
 import classes from "./AboutMe.module.scss";
 import adaptive from "../../constants/screenSize.module.scss";
 import ChapterName from "../../reusable/chaptername/ChapterName";
-import useWindowDimensions from "../../hooks/useWindowDimension";
 import Avatar from "../../../assets/img/avatar.png";
 import styled, { keyframes } from "styled-components";
 import { rollIn } from "react-animations";
@@ -11,10 +10,8 @@ const RotateInDiv = styled.div`
   animation: infinite 5s ${RotateInAnimation};
 `;
 export default function AboutMe() {
-  const { width } = useWindowDimensions();
-  const md4 = 600.98;
   return (
-    <div className={adaptive._container}>
+    <div className={adaptive._container} id="home">
       <div className={classes.aboutme}>
         <div className={classes.introduction}>
           <ChapterName
@@ -34,8 +31,10 @@ export default function AboutMe() {
             className={classes.profilePhoto}
             style={{
               backgroundImage: `url(${Avatar})`,
-              height: "15vw",
-              width: "15vw",
+              minHeight: "130px",
+              minWidth: "130px",
+              height: "20vw",
+              width: "20vw",
               backgroundRepeat: "no-repeat",
               backgroundSize: "cover",
               backgroundPosition: "center",
