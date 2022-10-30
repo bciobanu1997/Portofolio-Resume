@@ -1,0 +1,65 @@
+@import "../../constants/screenSize.module.scss";
+
+.emailForm {
+  display: flex;
+  text-align: start;
+
+  input {
+    text-align: start;
+    display: flex;
+    margin-bottom: 20px;
+    outline-color: #7e74f1;
+  }
+  .nameInput {
+    width: 32vw;
+    min-width: 350px;
+    height: 28px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    @media (max-width: $md1+px) {
+      width: 50vw;
+    }
+    @media (maxn-width: $md2+px) {
+      width: 55vw;
+    }
+  }
+  .messageInput {
+    outline-color: #7e74f1;
+    font-family: "Roboto";
+    text-align: start;
+    width: 32vw;
+    min-width: 350px;
+    height: 150px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    @media (max-width: $md1+px) {
+      width: 50vw;
+    }
+    @media (maxn-width: $md2+px) {
+      width: 55vw;
+    }
+  }
+  .submitButton {
+    text-align: center;
+    display: flex;
+    width: 33vw;
+    min-width: 350px;
+    border: none;
+    background-color: #7e74f1;
+    border-radius: 5px;
+    @media (max-width: $md1+px) {
+      width: 50vw;
+    }
+    @media (maxn-width: $md2+px) {
+      width: 55vw;
+    }
+    p {
+      padding: 5px;
+      margin: auto;
+      color: #fff;
+    }
+  }
+}

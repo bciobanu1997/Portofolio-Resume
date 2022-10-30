@@ -9,7 +9,6 @@ import Project1 from "../../../assets/img/project1.png";
 import Project2 from "../../../assets/img/project2.png";
 import Project3 from "../../../assets/img/project3.png";
 const items = [
-  <ProjectTemplate image={Project1} title={"Portofolio Website"} link={""} />,
   <ProjectTemplate
     image={Project2}
     title={"Finance Website"}
@@ -20,11 +19,12 @@ const items = [
     title={"E-Commerce Website"}
     link={" https://meliorastore.co.uk"}
   />,
+  <ProjectTemplate image={Project1} title={"Portofolio Website"} link={""} />,
 ];
 const responsive = {
   0: { items: 2 },
-  400: { items: 2 },
-  650: { items: 3 },
+  900: { items: 2 },
+  1100: { items: 3 },
 };
 export default function Portofolios() {
   return (

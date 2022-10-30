@@ -6,9 +6,7 @@ import { MdDesignServices, MdOutlineContactPhone } from "react-icons/md";
 import { GrProjects } from "react-icons/gr";
 import { HiMenuAlt1 } from "react-icons/hi";
 import { SiProgress } from "react-icons/si";
-import { BiCodeAlt } from "react-icons/bi";
 import { CgClose } from "react-icons/cg";
-import { Link } from "react-router-dom";
 import Logo from "../../../assets/logos/logo.png";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -18,7 +16,21 @@ const Header = () => {
   };
   const md3 = 767.98;
   const { width } = useWindowDimensions();
-
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch("resume.pdf").then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "CiobanuBorisResume.pdf";
+        alink.target = "_blank";
+        alink.click();
+      });
+    });
+  };
   return (
     <header className={`${classes.header} ${adaptive._container}`}>
       <div className={classes.content}>
@@ -35,55 +47,43 @@ const Header = () => {
             }`}
           >
             <ul>
-              <Link to={"/"}>
-                <li>
-                  {width < md3 ? (
-                    <MdDesignServices className={classes.logo} />
-                  ) : (
-                    ""
-                  )}
-                  Services
-                </li>
-              </Link>
-              <Link to={"/products"}>
-                <li>
-                  {width < md3 ? <GrProjects className={classes.logo} /> : ""}
-                  Portofolios
-                </li>
-              </Link>
+              <li>
+                {width < md3 ? (
+                  <MdDesignServices className={classes.logo} />
+                ) : (
+                  ""
+                )}
+                Services
+              </li>
 
-              <Link to={"/products"}>
-                <li>
-                  {width < md3 ? <BiCodeAlt className={classes.logo} /> : ""}
-                  Blog
-                </li>
-              </Link>
+              <li>
+                {width < md3 ? <GrProjects className={classes.logo} /> : ""}
+                Portofolios
+              </li>
 
-              <Link to={"/about"}>
-                <li>
-                  {width < md3 ? <SiProgress className={classes.logo} /> : ""}
-                  Experience
-                </li>
-              </Link>
-              <Link to={"/about"}>
-                <li>
-                  {width < md3 ? (
-                    <MdOutlineContactPhone className={classes.logo} />
-                  ) : (
-                    ""
-                  )}
-                  Contact
-                </li>
-              </Link>
+              <li>
+                {width < md3 ? <SiProgress className={classes.logo} /> : ""}
+                Experience
+              </li>
+              <li>
+                {width < md3 ? (
+                  <MdOutlineContactPhone className={classes.logo} />
+                ) : (
+                  ""
+                )}
+                Contact
+              </li>
             </ul>
           </nav>
           <nav className={classes.cart_nav}>
             <ul>
-              <Link to={"/cart"} className={classes.cart}>
+              <div className={classes.cart}>
                 <li>
-                  <div className={classes.title}>Resume</div>
+                  <div className={classes.title} onClick={onButtonClick}>
+                    Resume
+                  </div>
                 </li>
-              </Link>
+              </div>
             </ul>
           </nav>
           <div className={classes.toggle}>

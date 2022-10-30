@@ -36,8 +36,8 @@ const items = [
 ];
 const responsive = {
   0: { items: 2 },
-  400: { items: 2 },
-  650: { items: 3 },
+  900: { items: 2 },
+  1100: { items: 3 },
 };
 export default function Services() {
   return (

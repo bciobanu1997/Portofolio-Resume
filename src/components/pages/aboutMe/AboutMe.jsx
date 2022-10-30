@@ -3,6 +3,13 @@ import classes from "./AboutMe.module.scss";
 import adaptive from "../../constants/screenSize.module.scss";
 import ChapterName from "../../reusable/chaptername/ChapterName";
 import useWindowDimensions from "../../hooks/useWindowDimension";
+import Avatar from "../../../assets/img/avatar.png";
+import styled, { keyframes } from "styled-components";
+import { rollIn } from "react-animations";
+const RotateInAnimation = keyframes`${rollIn}`;
+const RotateInDiv = styled.div`
+  animation: infinite 5s ${RotateInAnimation};
+`;
 export default function AboutMe() {
   const { width } = useWindowDimensions();
   const md4 = 600.98;
@@ -22,7 +29,21 @@ export default function AboutMe() {
             Passionate about UI/UX
           </div>
         </div>
-        <div className={classes.profilePhoto}></div>
+        <RotateInDiv>
+          <div
+            className={classes.profilePhoto}
+            style={{
+              backgroundImage: `url(${Avatar})`,
+              height: "15vw",
+              width: "15vw",
+              backgroundRepeat: "no-repeat",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              borderRadius: "50%",
+              overflow: "hidden",
+            }}
+          ></div>
+        </RotateInDiv>
       </div>
     </div>
   );

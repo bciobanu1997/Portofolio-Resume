@@ -1,10 +1,27 @@
-.footer {
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 50px 0;
+@import "../../constants/screenSize.module.scss";
 
+.footer {
+  background: #fbfbfb;
+
+  .form {
+    padding-top: 50px;
+    display: flex;
+
+    .emailForm {
+      flex: 2;
+    }
+    .contactsForm {
+      flex: 1;
+      a {
+        text-decoration: none;
+      }
+    }
+  }
   .links {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 0;
     font-size: 20px;
     a {
       margin-right: 15px;
@@ -16,5 +33,29 @@
   .author {
     margin-top: 10px;
     font-size: 10px;
+  }
+}
+.contacts {
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+  padding-left: 20px;
+  .icon {
+    background-color: #f5f3fe;
+    color: #7e74f1;
+    display: flex;
+    padding: 14px;
+    border-radius: 10px;
+  }
+  .text {
+    margin-left: 20px;
+    .title {
+      font-size: 14px;
+      color: #232e35;
+    }
+    .subtitle {
+      font-size: 10px;
+      color: #656d72;
+    }
   }
 }
