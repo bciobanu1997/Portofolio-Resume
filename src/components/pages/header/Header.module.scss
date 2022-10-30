@@ -115,10 +115,15 @@
           padding: 0 1.25rem;
           transition: 0.3s ease all;
           text-decoration: none !important;
+          align-items: center;
           cursor: pointer;
+          a {
+            display: flex;
+          }
           .logo {
             margin-right: 5px;
             font-size: 18px;
+            display: flex;
           }
           @media (max-width: $md3+px) {
             display: flex;
@@ -216,4 +221,9 @@
   ul {
     padding: 0;
   }
+}
+.menuTitle {
+  display: flex;
+  text-align: center;
+  margin: auto;
 }

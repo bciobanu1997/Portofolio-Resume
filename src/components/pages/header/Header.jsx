@@ -57,13 +57,14 @@ const Header = () => {
                   smooth={true}
                   offset={-100}
                   duration={500}
+                  onClick={width < md3 ? menuToggleHandler : ""}
                 >
                   {width < md3 ? (
                     <MdDesignServices className={classes.logo} />
                   ) : (
                     ""
                   )}
-                  Services
+                  <div className={classes.menuTitle}>Services</div>
                 </Link>
               </li>
 
@@ -74,9 +75,10 @@ const Header = () => {
                   smooth={true}
                   offset={-100}
                   duration={500}
+                  onClick={width < md3 ? menuToggleHandler : ""}
                 >
                   {width < md3 ? <GrProjects className={classes.logo} /> : ""}
-                  Portofolios
+                  <div className={classes.menuTitle}>Portofolios</div>
                 </Link>
               </li>
 
@@ -87,9 +89,10 @@ const Header = () => {
                   smooth={true}
                   offset={-100}
                   duration={500}
+                  onClick={width < md3 ? menuToggleHandler : ""}
                 >
                   {width < md3 ? <SiProgress className={classes.logo} /> : ""}
-                  Experience
+                  <div className={classes.menuTitle}>Experience</div>
                 </Link>
               </li>
               <li>
@@ -99,13 +102,14 @@ const Header = () => {
                   smooth={true}
                   offset={-20}
                   duration={500}
+                  onClick={width < md3 ? menuToggleHandler : ""}
                 >
                   {width < md3 ? (
                     <MdOutlineContactPhone className={classes.logo} />
                   ) : (
                     ""
                   )}
-                  Contact
+                  <div className={classes.menuTitle}>Contact</div>
                 </Link>
               </li>
             </ul>
