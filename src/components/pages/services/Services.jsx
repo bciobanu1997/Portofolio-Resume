@@ -35,8 +35,8 @@ const items = [
   </Specialized>,
 ];
 const responsive = {
-  0: { items: 2 },
-  900: { items: 2 },
+  0: { items: 1.2 },
+  600: { items: 2.2 },
   1100: { items: 3 },
 };
 export default function Services() {
