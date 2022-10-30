@@ -19,6 +19,7 @@ const Header = () => {
 
   const md3 = 767.98;
   const { width } = useWindowDimensions();
+  // using to detect click on page
   const { ref, isComponentVisible, setIsComponentVisible } =
     useComponentVisible(true);
   const onButtonClick = () => {
@@ -36,10 +37,10 @@ const Header = () => {
       });
     });
   };
-
+  // detect click on page and close menu
   useEffect(() => {
     if (isComponentVisible == false) {
-      setMenuOpen((p) => !p);
+      setMenuOpen(false);
       setIsComponentVisible(true);
     }
   }, [isComponentVisible]);
