@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import classes from "./Header.module.scss";
 import adaptive from "../../constants/screenSize.module.scss";
 import useWindowDimensions from "../../hooks/useWindowDimension";
@@ -9,14 +9,18 @@ import { SiProgress } from "react-icons/si";
 import { CgClose } from "react-icons/cg";
 import Logo from "../../../assets/logos/logo.png";
 import { Link } from "react-scroll";
+import useComponentVisible from "../../hooks/useComponentVisible";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   const menuToggleHandler = () => {
     setMenuOpen((p) => !p);
   };
+
   const md3 = 767.98;
   const { width } = useWindowDimensions();
+  const { ref, isComponentVisible, setIsComponentVisible } =
+    useComponentVisible(true);
   const onButtonClick = () => {
     // using Java Script method to get PDF file
     fetch("resume.pdf").then((response) => {
@@ -32,6 +36,13 @@ const Header = () => {
       });
     });
   };
+
+  useEffect(() => {
+    if (isComponentVisible == false) {
+      setMenuOpen((p) => !p);
+      setIsComponentVisible(true);
+    }
+  }, [isComponentVisible]);
   return (
     <header className={`${classes.header}`}>
       <div className={`${classes.content} ${adaptive._container}`}>
@@ -43,77 +54,80 @@ const Header = () => {
             <div className={classes.name}>Boris</div>
           </Link>
         </div>
-        <div className={classes.navs}>
-          <nav
-            className={`${classes.navleft} ${
-              menuOpen ? classes.isMenuLeft : ""
-            }`}
-          >
-            <ul>
-              <li>
-                <Link
-                  to="services"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  onClick={width < md3 ? menuToggleHandler : ""}
-                >
-                  {width < md3 ? (
-                    <MdDesignServices className={classes.logo} />
-                  ) : (
-                    ""
-                  )}
-                  <div className={classes.menuTitle}>Services</div>
-                </Link>
-              </li>
+        <div className={classes.navs} ref={ref}>
+          {
+            <nav
+              className={`${classes.navleft} ${
+                menuOpen ? classes.isMenuLeft : ""
+              }`}
+            >
+              <ul>
+                <li>
+                  <Link
+                    to="services"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                    onClick={width < md3 ? menuToggleHandler : ""}
+                  >
+                    {width < md3 ? (
+                      <MdDesignServices className={classes.logo} />
+                    ) : (
+                      ""
+                    )}
+                    <div className={classes.menuTitle}>Services</div>
+                  </Link>
+                </li>
 
-              <li>
-                <Link
-                  to="portofolios"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  onClick={width < md3 ? menuToggleHandler : ""}
-                >
-                  {width < md3 ? <GrProjects className={classes.logo} /> : ""}
-                  <div className={classes.menuTitle}>Portofolios</div>
-                </Link>
-              </li>
+                <li>
+                  <Link
+                    to="portofolios"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                    onClick={width < md3 ? menuToggleHandler : ""}
+                  >
+                    {width < md3 ? <GrProjects className={classes.logo} /> : ""}
+                    <div className={classes.menuTitle}>Portofolios</div>
+                  </Link>
+                </li>
 
-              <li>
-                <Link
-                  to="experience"
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  duration={500}
-                  onClick={width < md3 ? menuToggleHandler : ""}
-                >
-                  {width < md3 ? <SiProgress className={classes.logo} /> : ""}
-                  <div className={classes.menuTitle}>Experience</div>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="contact"
-                  spy={true}
-                  smooth={true}
-                  offset={-20}
-                  duration={500}
-                  onClick={width < md3 ? menuToggleHandler : ""}
-                >
-                  {width < md3 ? (
-                    <MdOutlineContactPhone className={classes.logo} />
-                  ) : (
-                    ""
-                  )}
-                  <div className={classes.menuTitle}>Contact</div>
-                </Link>
-              </li>
-            </ul>
-          </nav>
+                <li>
+                  <Link
+                    to="experience"
+                    spy={true}
+                    smooth={true}
+                    offset={-100}
+                    duration={500}
+                    onClick={width < md3 ? menuToggleHandler : ""}
+                  >
+                    {width < md3 ? <SiProgress className={classes.logo} /> : ""}
+                    <div className={classes.menuTitle}>Experience</div>
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={-20}
+                    duration={500}
+                    onClick={width < md3 ? menuToggleHandler : ""}
+                  >
+                    {width < md3 ? (
+                      <MdOutlineContactPhone className={classes.logo} />
+                    ) : (
+                      ""
+                    )}
+                    <div className={classes.menuTitle}>Contact</div>
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          }
+
           <nav className={classes.cart_nav}>
             <ul>
               <div className={classes.cart}>

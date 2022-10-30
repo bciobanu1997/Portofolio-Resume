@@ -9,7 +9,7 @@ const RotateInAnimation = keyframes`${rollIn}`;
 const RotateInDiv = styled.div`
   animation: infinite 5s ${RotateInAnimation};
 `;
-export default function AboutMe() {
+export default function AboutMe({}) {
   return (
     <div className={adaptive._container} id="home">
       <div className={classes.aboutme}>
