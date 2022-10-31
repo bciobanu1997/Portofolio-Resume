@@ -9,6 +9,7 @@ export default function Education() {
     { type: "CSS", level: 77 },
     { type: "JavaScript", level: 55 },
     { type: "React.js", level: 62 },
+    { type: "SQL", level: 70 },
     { type: "Figma", level: 73 },
   ];
   return (
