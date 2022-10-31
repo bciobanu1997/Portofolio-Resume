@@ -19,8 +19,11 @@
     @media (max-width: $md1+px) {
       width: 50vw;
     }
-    @media (maxn-width: $md2+px) {
+    @media (max-width: $md2+px) {
       width: 55vw;
+    }
+    @media (max-width: $md4+px) {
+      width: 85vw;
     }
   }
   .messageInput {
@@ -37,8 +40,11 @@
     @media (max-width: $md1+px) {
       width: 50vw;
     }
-    @media (maxn-width: $md2+px) {
+    @media (max-width: $md2+px) {
       width: 55vw;
+    }
+    @media (max-width: $md4+px) {
+      width: 85vw;
     }
   }
   .submitButton {
@@ -51,10 +57,13 @@
     border-radius: 5px;
     padding: 8px 0px;
     @media (max-width: $md1+px) {
-      width: 50vw;
+      width: 51vw;
     }
-    @media (maxn-width: $md2+px) {
-      width: 55vw;
+    @media (max-width: $md2+px) {
+      width: 56vw;
+    }
+    @media (max-width: $md4+px) {
+      width: 86vw;
     }
     p {
       padding: 5px;

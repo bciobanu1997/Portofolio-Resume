@@ -5,8 +5,8 @@
 
   .form {
     padding-top: 50px;
-
-    @media (max-width: $md3+px) {
+    display: flex;
+    @media (max-width: $md4+px) {
       display: block;
     }
     .emailForm {

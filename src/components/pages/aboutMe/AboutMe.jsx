@@ -7,7 +7,7 @@ import styled, { keyframes } from "styled-components";
 import { rollIn } from "react-animations";
 const RotateInAnimation = keyframes`${rollIn}`;
 const RotateInDiv = styled.div`
-  animation: infinite 5s ${RotateInAnimation};
+  animation: 5s ${RotateInAnimation};
 `;
 export default function AboutMe({}) {
   return (

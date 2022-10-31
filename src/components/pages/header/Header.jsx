@@ -10,6 +10,7 @@ import { CgClose } from "react-icons/cg";
 import Logo from "../../../assets/logos/logo.png";
 import { Link } from "react-scroll";
 import useComponentVisible from "../../hooks/useComponentVisible";
+import Resume from "../../../assets/files/resume.pdf";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -24,7 +25,7 @@ const Header = () => {
     useComponentVisible(true);
   const onButtonClick = () => {
     // using Java Script method to get PDF file
-    fetch("resume.pdf").then((response) => {
+    fetch("http://localhost:3000/Portofolio-Resume").then((response) => {
       response.blob().then((blob) => {
         // Creating new object of PDF file
         const fileURL = window.URL.createObjectURL(blob);
@@ -32,14 +33,14 @@ const Header = () => {
         let alink = document.createElement("a");
         alink.href = fileURL;
         alink.download = "CiobanuBorisResume.pdf";
-        alink.target = "_blank";
+
         alink.click();
       });
     });
   };
   // detect click on page and close menu
   useEffect(() => {
-    if (isComponentVisible == false) {
+    if (isComponentVisible === false) {
       setMenuOpen(false);
       setIsComponentVisible(true);
     }
@@ -133,9 +134,15 @@ const Header = () => {
             <ul>
               <div className={classes.cart}>
                 <li>
-                  <div className={classes.title} onClick={onButtonClick}>
+                  <a
+                    className={classes.title}
+                    href={Resume}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    download="CiobanuBorisResume.pdf"
+                  >
                     Resume
-                  </div>
+                  </a>
                 </li>
               </div>
             </ul>
