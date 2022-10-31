@@ -23,21 +23,7 @@ const Header = () => {
   // using to detect click on page
   const { ref, isComponentVisible, setIsComponentVisible } =
     useComponentVisible(true);
-  const onButtonClick = () => {
-    // using Java Script method to get PDF file
-    fetch("http://localhost:3000/Portofolio-Resume").then((response) => {
-      response.blob().then((blob) => {
-        // Creating new object of PDF file
-        const fileURL = window.URL.createObjectURL(blob);
-        // Setting various property values
-        let alink = document.createElement("a");
-        alink.href = fileURL;
-        alink.download = "CiobanuBorisResume.pdf";
 
-        alink.click();
-      });
-    });
-  };
   // detect click on page and close menu
   useEffect(() => {
     if (isComponentVisible === false) {
