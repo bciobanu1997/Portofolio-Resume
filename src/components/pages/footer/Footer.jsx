@@ -36,19 +36,25 @@ export default function Footer() {
           </div>
         </div>
         <div className={classes.links}>
-          <a href="https://github.com/bciobanu1997?tab=repositories">
+          <a
+            href="https://github.com/bciobanu1997?tab=repositories"
+            target="_blank"
+          >
             <FiGithub />
           </a>
-          <a href="https://www.linkedin.com/in/boris-ciobanu-0790a3189/">
+          <a
+            href="https://www.linkedin.com/in/boris-ciobanu-0790a3189/"
+            target="_blank"
+          >
             <FiLinkedin />
           </a>
-          <a href="https://twitter.com/BorisCiobanu">
+          <a href="https://twitter.com/BorisCiobanu" target="_blank">
             <FiTwitter />
           </a>
           <a href="mailto:boris.ciobanuu@gmail.com">
             <FiMail />
           </a>
-          <div className={classes.author}>©2020 - Boris</div>
+          <div className={classes.author}>©2022 - Boris</div>
         </div>
       </div>
     </div>
