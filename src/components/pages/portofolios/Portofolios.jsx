@@ -36,8 +36,9 @@ const items = [
   />,
 ];
 const responsive = {
-  0: { items: 1.2 },
-  600: { items: 2.2 },
+  0: { items: 1 },
+  400: { items: 1 },
+  550: { items: 2 },
   900: { items: 3 },
 };
 export default function Portofolios() {

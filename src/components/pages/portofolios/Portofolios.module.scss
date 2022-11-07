@@ -1,3 +1,4 @@
+@import "../../constants/screenSize.module.scss";
 .portofolios {
   padding: 100px 0;
   .title {
@@ -5,7 +6,9 @@
   }
   li {
     margin-right: 40px;
-
+    @media (max-width: $md3+px) {
+      margin-right: 0px;
+    }
     &:last-child {
       margin-right: 0;
     }

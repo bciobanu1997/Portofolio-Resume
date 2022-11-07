@@ -1,3 +1,5 @@
+@import "../../constants/screenSize.module.scss";
+
 .services {
   background: #fbfbfb;
   padding: 100px 0;
@@ -9,6 +11,12 @@
   li {
     margin-right: 40px;
 
+    @media (max-width: $md2+px) {
+      margin-right: 10px;
+    }
+    @media (max-width: $md3+px) {
+      margin-right: 0px;
+    }
     &:last-child {
       margin-right: 0;
     }

@@ -14,11 +14,10 @@ export default function ProjectTemplate({ image, title, link, language }) {
           rgba(6, 6, 6, 0.10), 
           rgba(6, 6, 6, 0.10)
         ), url(${image})`,
-              width: "300px",
               height: "300px",
               backgroundRepeat: "no-repeat",
               backgroundSize: "contain",
-              backgroundPosition: "start",
+              backgroundPosition: "center",
               borderRadius: "10px 10px 0 0",
               cursor: "pointer",
             }}
