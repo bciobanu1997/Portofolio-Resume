@@ -3,6 +3,7 @@ import classes from "./App.module.scss";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Main from "../main/Main";
 import { hotjar } from "react-hotjar";
+import ScrollToTop from "../../hooks/useScrollToTop";
 function App() {
   //------------------------------>
   hotjar.initialize(
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className={classes.app}>
       <HashRouter basename="/">
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Main />} />
         </Routes>

@@ -39,16 +39,22 @@ export default function Footer() {
           <a
             href="https://github.com/bciobanu1997?tab=repositories"
             target="_blank"
+            rel="noreferrer"
           >
             <FiGithub />
           </a>
           <a
             href="https://www.linkedin.com/in/boris-ciobanu-0790a3189/"
             target="_blank"
+            rel="noreferrer"
           >
             <FiLinkedin />
           </a>
-          <a href="https://twitter.com/BorisCiobanu" target="_blank">
+          <a
+            href="https://twitter.com/BorisCiobanu"
+            target="_blank"
+            rel="noreferrer"
+          >
             <FiTwitter />
           </a>
           <a href="mailto:boris.ciobanuu@gmail.com">
