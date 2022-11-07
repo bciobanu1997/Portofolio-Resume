@@ -6,6 +6,7 @@ import Portofolios from "../portofolios/Portofolios";
 import Experience from "../experience/Experience";
 import Education from "../education/Education";
 import Footer from "../footer/Footer";
+
 export default function Main() {
   return (
     <div>

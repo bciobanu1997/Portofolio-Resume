@@ -5,36 +5,8 @@ import ChapterName from "../../reusable/chaptername/ChapterName";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import ProjectTemplate from "../../reusable/projectTemplate/ProjectTemplate";
-import Project1 from "../../../assets/img/project1.png";
-import Project2 from "../../../assets/img/project2.png";
-import Project3 from "../../../assets/img/project3.png";
-import Project4 from "../../../assets/img/project4.png";
-const items = [
-  <ProjectTemplate
-    image={Project1}
-    title={"Finance Website"}
-    link={"https://bciobanu1997.github.io/DemoLandingV1/"}
-    language={"HTML CSS"}
-  />,
-  <ProjectTemplate
-    image={Project3}
-    title={"E-Commerce Website"}
-    link={" https://meliorastore.co.uk"}
-    language={"React"}
-  />,
-  <ProjectTemplate
-    image={Project4}
-    title={"Medical Quotes Website"}
-    link={"https://bciobanu1997.github.io/DemoLandingV2/"}
-    language={"HTML CSS"}
-  />,
-  <ProjectTemplate
-    image={Project2}
-    title={"Portofolio Website"}
-    language={"React"}
-    link={""}
-  />,
-];
+import PortofolioData from "./PortofolioData";
+
 const responsive = {
   0: { items: 1 },
   300: { items: 1 },
@@ -57,7 +29,15 @@ export default function Portofolios() {
           mouseTracking
           touchTracking
           className={classes.carousel}
-          items={items}
+          items={PortofolioData().map((data, index) => (
+            <ProjectTemplate
+              key={index}
+              image={data.image}
+              title={data.title}
+              link={data.link}
+              language={data.language}
+            />
+          ))}
         />
       </div>
     </div>
