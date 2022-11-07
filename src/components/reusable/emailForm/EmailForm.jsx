@@ -45,6 +45,7 @@ export default function EmailForm() {
           className={classes.nameInput}
         ></input>
         <textarea
+          style={{ resize: "none" }}
           type="email"
           name="user_message"
           placeholder="Message"
