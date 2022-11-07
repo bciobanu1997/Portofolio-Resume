@@ -2,6 +2,7 @@ import React from "react";
 import classes from "./App.module.scss";
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Main from "../main/Main";
+import { hotjar } from "react-hotjar";
 function App() {
   //------------------------------>
 
