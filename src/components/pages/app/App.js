@@ -5,7 +5,7 @@ import Main from "../main/Main";
 import { hotjar } from "react-hotjar";
 function App() {
   //------------------------------>
-
+  hotjar.initialize(3236118, 6);
   //------------------------------>
 
   //------------------------------>

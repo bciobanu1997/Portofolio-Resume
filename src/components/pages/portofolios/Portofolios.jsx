@@ -37,9 +37,12 @@ const items = [
 ];
 const responsive = {
   0: { items: 1 },
-  400: { items: 1 },
-  550: { items: 2 },
-  900: { items: 3 },
+  300: { items: 1 },
+  400: { items: 1.2 },
+  550: { items: 1.7 },
+  600: { items: 2 },
+  900: { items: 2.7 },
+  1000: { items: 3 },
 };
 export default function Portofolios() {
   return (
@@ -50,7 +53,7 @@ export default function Portofolios() {
         </div>
         <AliceCarousel
           responsive={responsive}
-          disableButtonsControls={true}
+          disableButtonsControls={false}
           mouseTracking
           touchTracking
           className={classes.carousel}
