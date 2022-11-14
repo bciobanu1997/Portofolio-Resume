@@ -8,7 +8,9 @@ import Education from "../education/Education";
 import Footer from "../footer/Footer";
 import { hotjar } from "react-hotjar";
 import ScrollToTop from "../../hooks/useScrollToTop";
+import { clarity } from "react-microsoft-clarity";
 export default function Main() {
+  clarity.init(process.env.REACT_APP_CLARITY_ID);
   hotjar.initialize(
     process.env.REACT_APP_HOTJAR_ID,
     process.env.REACT_APP_HOTJAR_VERSION
