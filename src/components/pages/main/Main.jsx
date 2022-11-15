@@ -6,22 +6,11 @@ import Portofolios from "../portofolios/Portofolios";
 import Experience from "../experience/Experience";
 import Education from "../education/Education";
 import Footer from "../footer/Footer";
-import { hotjar } from "react-hotjar";
 import ScrollToTop from "../../hooks/useScrollToTop";
-import { clarity } from "react-microsoft-clarity";
-import ReactGA from "react-ga";
+
 export default function Main() {
-  ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_TOKEN);
-  clarity.init(process.env.REACT_APP_CLARITY_ID);
-  hotjar.initialize(
-    process.env.REACT_APP_HOTJAR_ID,
-    process.env.REACT_APP_HOTJAR_VERSION
-  );
   //------------------------------>
-  if (hotjar.initialized()) {
-    hotjar.identify("USER_ID", { userProperty: "value" });
-    // Add an event
-  }
+
   const resetWindowScrollPosition = useCallback(
     () => window.scrollTo(0, 0),
     []
