@@ -4,7 +4,6 @@ import { HashRouter, Route, Routes } from "react-router-dom";
 import Main from "../main/Main";
 import { hotjar } from "react-hotjar";
 import ScrollToTop from "../../hooks/useScrollToTop";
-import { clarity } from "react-microsoft-clarity";
 import ReactGA from "react-ga";
 //------------------------------>
 hotjar.initialize(
@@ -19,7 +18,7 @@ if (hotjar.initialized()) {
 //------------------------------>
 ReactGA.initialize(`${process.env.REACT_APP_GOOGLE_ANALYTICS_TOKEN}`);
 ReactGA.pageview(window.location.pathname + window.location.search);
-clarity.init(process.env.REACT_APP_CLARITY_ID);
+
 //------------------------------>
 
 function App() {
