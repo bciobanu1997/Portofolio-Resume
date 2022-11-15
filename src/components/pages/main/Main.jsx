@@ -11,7 +11,7 @@ import ScrollToTop from "../../hooks/useScrollToTop";
 import { clarity } from "react-microsoft-clarity";
 import ReactGA from "react-ga";
 export default function Main() {
-  ReactGA.initialize(`${process.env.REACT_APP_GOOGLE_ANALYTICS_TOKEN}`);
+  ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS_TOKEN);
   clarity.init(process.env.REACT_APP_CLARITY_ID);
   hotjar.initialize(
     process.env.REACT_APP_HOTJAR_ID,
