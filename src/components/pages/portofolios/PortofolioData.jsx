@@ -17,7 +17,7 @@ export default function PortofolioData() {
       id: 2,
       title: "E-Commerce Website",
       image: Project3,
-      link: "https://bciobanu1997.github.io/DemoLandingV1/",
+      link: "https://meliorastore.co.uk",
       language: "React JS",
     },
     {
